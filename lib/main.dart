@@ -3,11 +3,12 @@ import 'package:dynamic_color_demo/my_container.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// 통일된 색깔로 바꿀 수 있는 앱 (Color & Theme)
 void main() {
   runApp(const DynamicColorDemo());
 }
 
-const seedColor = Color(0xff00ffff);
+const seedColor = Color(0xff84de79);
 const outPadding = 32.0;
 
 class DynamicColorDemo extends StatelessWidget {
@@ -204,26 +205,30 @@ class _MainScreenState extends State<MainScreen> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(
-                                      '7',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headlineSmall!
-                                          .copyWith(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onPrimaryContainer,
-                                              fontWeight: FontWeight.bold),
+                                    Expanded(
+                                      child: Text(
+                                        '7',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineSmall!
+                                            .copyWith(
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onPrimaryContainer,
+                                                fontWeight: FontWeight.bold),
+                                      ),
                                     ),
-                                    Text(
-                                      'in progress',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall!
-                                          .copyWith(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onPrimaryContainer),
+                                    Expanded(
+                                      child: Text(
+                                        'in progress',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleSmall!
+                                            .copyWith(
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onPrimaryContainer),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -241,29 +246,35 @@ class _MainScreenState extends State<MainScreen> {
                             Flexible(
                               flex: 2,
                               child: MyContainer(
+                                // You can use the widget Expanded for each container inside the column. 
+                                // And then use flex to make the correct adjustments.
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(
-                                      '10',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headlineSmall!
-                                          .copyWith(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onPrimaryContainer,
-                                              fontWeight: FontWeight.bold),
+                                    Expanded(
+                                      child: Text(
+                                        '10',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineSmall!
+                                            .copyWith(
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onPrimaryContainer,
+                                                fontWeight: FontWeight.bold),
+                                      ),
                                     ),
-                                    Text(
-                                      'on going',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall!
-                                          .copyWith(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onPrimaryContainer),
+                                    Expanded(
+                                      child: Text(
+                                        'on going',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleSmall!
+                                            .copyWith(
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onPrimaryContainer),
+                                      ),
                                     ),
                                   ],
                                 ),
